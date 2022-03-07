@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Dosis;
+}
+html, body, .container, #__next{
+  height: 100%;
 }
 
 a {
@@ -13,4 +22,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.home{
+  overflow: hidden;
+}
+.btn{
+ filter: drop-shadow(0px 4px 4px #7109b760);
 }
