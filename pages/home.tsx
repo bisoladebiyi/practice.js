@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           <h1 className="text-4xl font-extrabold leading-relaxed mb-6">
             Sharpen your <br />
             Javascript, Typescript and <br />
-            React.js skills!
+            React.js skills! 😁
           </h1>
           <div className="py-1 border-l pl-3 text-gray-400 border-gray-700 flex items-center">
             <p>Let&apos;s help you practice.</p>
