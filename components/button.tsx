@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react'
 interface Props {
     size: 'small' | 'big' | 'large';
     outline?: 'true' | 'false';
-    noTransparentBg?: 'true' | 'false'
+    noTransparentBg?: 'true' | 'false';
+    type?: 'button' | 'submit'
     children: string;
     className?: string;
 }
 
-const Button = ({size, outline, children, noTransparentBg, className}: Props) => {
+const Button = ({size, outline, children, noTransparentBg, type, className}: Props) => {
     const [outlineStyle, setOutlineStyle] = useState("")
     const [sizeStyle, setSizeStyle] = useState("")
     useEffect(()=> {
@@ -30,7 +31,7 @@ const Button = ({size, outline, children, noTransparentBg, className}: Props) =>
   
 
   return (
-    <button className={`font-semibold text-sm rounded-sm  transition-colors ${outlineStyle} ${sizeStyle} ${className}`}>{children}</button>
+    <button className={`font-semibold text-sm rounded-sm  transition-colors ${outlineStyle} ${sizeStyle} ${className}`} type={type}>{children}</button>
   )
 }
 

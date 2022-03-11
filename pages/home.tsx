@@ -7,8 +7,21 @@ import element from "../images/Vector 4.svg";
 import js from "../images/javascript-js-seeklogo.com.svg";
 import ts from "../images/typescript-seeklogo.com.svg";
 import react from "../images/react-seeklogo.com.svg";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
 
 const Home: NextPage = () => {
+  const router = useRouter()
+useEffect(()=> {
+onAuthStateChanged(auth, user => {
+  if(user){
+    router.push("/dashboard") 
+  }
+})
+}, [router])
   return (
     <div className="container home relative">
       <Head>
@@ -25,9 +38,13 @@ const Home: NextPage = () => {
           <div className="py-1 border-l pl-3 text-gray-400 border-gray-700 flex items-center">
             <p>Let&apos;s help you practice.</p>
           </div>
-          <Button size="big" className="mt-10 btn">
+          <Link href={"/login"} passHref>
+          <div>
+          <Button size="big" noTransparentBg="true" className="mt-10 btn">
             Get Started
           </Button>
+          </div></Link>
+          
         </div>
 
         <div className="grid grid-cols-2 place-items-center gap-10 relative">
