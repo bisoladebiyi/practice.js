@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Button from '../components/button'
+import HeadComponent from '../components/head'
 import Input from '../components/input'
 import { auth } from '../firebase'
 import { UserDataType } from '../types'
@@ -25,9 +26,10 @@ onAuthStateChanged(auth, user => {
   }
   return (
     <div className='container grid place-items-center'>
+       <HeadComponent title="Practice.js - Log In" />
     <div className='text-center w-1/2 bg-slate-100 p-10 rounded-sm h-full grid place-items-center'>
         <div className='w-full'>
-        <p className='font-black text-5xl text-gray-700 cursor-pointer'>Practice<span className='text-purp'>.js</span></p>
+        <Link href="/" passHref><p className='font-black text-5xl text-gray-700 cursor-pointer'>Practice<span className='text-purp'>.js</span></p></Link>
         <p className='font-bold text-xl text-gray-700 mt-8'>Welcome Back!</p>
         <p className='font-bold text-lg text-gray-600 mb-8'>Have you practiced today? Keep going 💪</p>
         <form action="" onSubmit={(e) => logIn(e)}>

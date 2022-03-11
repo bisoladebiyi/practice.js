@@ -2,6 +2,9 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import DashboardNav from '../components/dashboardNav'
+import Exercises from '../components/exercises'
+import HeadComponent from '../components/head'
+import Progress from '../components/progress'
 import SideMenu from '../components/sideMenu'
 import { auth } from '../firebase'
 
@@ -23,10 +26,16 @@ const Dashboard = () => {
 
   }, [router])
   return (
-    <div className='container flex'>
+    <div className='container flex justify-between'>
+      <HeadComponent title="Practice.js - Dashboard" />
       <SideMenu />
-      <div className='w-full'>
+      <div className='w-full overflow-scroll'>
         <DashboardNav name={userData.name} />
+         <div className='px-10 pb-10'>
+           <Progress />
+         <Exercises />
+         </div>
+      
       </div>
     </div>
   )

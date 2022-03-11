@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
+import HeadComponent from "../components/head";
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -24,9 +25,7 @@ onAuthStateChanged(auth, user => {
 }, [router])
   return (
     <div className="container home relative">
-      <Head>
-        <title>Practice.js - Home</title>
-      </Head>
+       <HeadComponent title="Practice.js - Home" />
       <Navbar />
       <div className="flex items-center justify-between w-9/12 mx-auto mt-12">
         <div>
@@ -55,7 +54,7 @@ onAuthStateChanged(auth, user => {
           </div>
           <p className="absolute top-0 -left-10 font-bold text-purp -rotate-12">
             <del>var</del> let{" "}
-            <span className="text-gray-700">x:number = 5</span>
+            <span className="text-gray-700">x:<span className="text-orange-400">number</span> = 5</span>
           </p>
           <p className="absolute -right-40 font-bold text-purp rotate-90">
             (<span className="text-orange-400"> message </span>) ={">"}
