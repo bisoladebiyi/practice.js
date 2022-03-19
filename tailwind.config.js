@@ -10,6 +10,9 @@ module.exports = {
         'yellow': '#f9c74f',
         'light-purp': '#7109b7f3',
         'lighter-purp': '#7109b730'
+      },
+      borderRadius: {
+        'circle': "50%"
       }
     },
   },

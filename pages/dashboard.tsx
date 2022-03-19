@@ -7,10 +7,9 @@ import HeadComponent from '../components/head'
 import Progress from '../components/progress'
 import SideMenu from '../components/sideMenu'
 import { auth } from '../firebase'
+import { DataType } from '../types'
 
-interface DataType {
-  name: string | null
-}
+
 const Dashboard = () => {
   const [ userData, setUserData ] = useState<DataType>({name: ""})
   const router = useRouter()
