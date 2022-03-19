@@ -1,0 +1,50 @@
+.timeline{
+    position: relative;
+}
+.timeline::after{
+    position: absolute;
+    content: "";
+    height: calc(100% - 30px);
+    width: 10px;
+    background-color: rgba(242, 241, 241, 0.761);
+    left: 50%;
+    top: 0;
+}
+.right{
+    position: relative;
+    right: calc(-50% - 10px );
+    padding-left: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.right::after{
+position: absolute;
+content: "";
+width: 40px;
+height: 40px;
+background-color: white;
+border: 10px solid #7109b77b;
+border-radius: 50%;
+top: 0;
+left: -25px;
+z-index: 20;
+}
+.left{
+    position: relative;
+    left: 0;
+    padding-right: 100px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.left::after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 10px solid #7109b77b;
+    border-radius: 50%;
+    top: 0;
+    right: -25px;
+    z-index: 20;
+    }
