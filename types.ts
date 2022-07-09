@@ -6,9 +6,16 @@ export interface UserDataType {
     confirm?: string;
 }
 export interface DataType {
-    name: string | null | undefined
+    name: string | null | undefined;
 }
-export interface TopicTypes{
+export interface TopicTypes {
     topic: string;
     position: string;
+    id?: string;
+}
+export interface QuestionTypes {
+    correctOption: string;
+    optionPicked: string;
+    options: string[];
+    question: string;
 }

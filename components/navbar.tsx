@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import Button from './button'
+import Button from './elements/button'
 
 const Navbar = () => {
   return (
