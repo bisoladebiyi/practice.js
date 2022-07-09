@@ -1,12 +1,12 @@
 import { onAuthStateChanged } from 'firebase/auth'
 import React, { useEffect, useState } from 'react'
-import DashboardNav from '../../components/dashboardNav'
-import HeadComponent from '../../components/head'
-import SideMenu from '../../components/sideMenu'
-import Topics from '../../components/topics'
-import { auth } from '../../firebase'
-import { jsTopics } from '../../topics'
-import { DataType } from '../../types'
+import DashboardNav from '../../../components/dashboardNav'
+import HeadComponent from '../../../components/head'
+import SideMenu from '../../../components/sideMenu'
+import Topics from '../components/topics'
+import { auth } from '../../../firebase'
+import { jsTopics } from '../../../topics'
+import { DataType } from '../../../types'
 
 
 const Javascript = () => {
@@ -17,7 +17,7 @@ const Javascript = () => {
         })
     },[])
   return (
-    <div className='container flex justify-between'>
+    <div className='containerDiv flex justify-between'>
       <HeadComponent title="Practice.js - Exercise Javascript" />
       <SideMenu active="active-js" />
       <div className='w-full overflow-scroll'>

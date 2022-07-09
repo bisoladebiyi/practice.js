@@ -2,9 +2,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FormEvent, useEffect, useState } from "react";
-import Button from "../components/button";
+import Button from "../components/elements/button";
 import HeadComponent from "../components/head";
-import Input from "../components/input";
+import Input from "../components/elements/input";
 import { auth } from "../firebase";
 import { UserDataType } from "../types";
 import { createAccount } from "../utils";
@@ -33,7 +33,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="container grid place-items-center">
+    <div className="containerDiv grid place-items-center">
        <HeadComponent title="Practice.js - Sign Up" />
       <div className="text-center w-1/2 bg-slate-100 p-10 rounded-sm h-full grid place-items-center">
         <div className="w-full">

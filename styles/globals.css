@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: Dosis;
 }
-html, body, .container, #__next{
+html, body, .containerDiv, #__next{
   height: 100%;
 }
 

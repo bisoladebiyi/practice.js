@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import DashboardNav from '../../components/dashboardNav'
 import HeadComponent from '../../components/head'
 import SideMenu from '../../components/sideMenu'
-import Topics from '../../components/topics'
+import Topics from './components/topics'
 import { auth } from '../../firebase'
 import { reactTopics } from '../../topics'
 import { DataType } from '../../types'
@@ -17,7 +17,7 @@ const ReactExercise = () => {
     },[])
    
   return (
-    <div className='container flex justify-between w-full important'>
+    <div className='containerDiv flex justify-between w-full important'>
          <HeadComponent title="Practice.js - Exercise React" />
         <SideMenu active="active-react"/>
         <div className='w-full overflow-scroll'>

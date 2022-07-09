@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Button from "../components/button";
+import Button from "../components/elements/button";
 import Navbar from "../components/navbar";
 import element from "../images/Vector 4.svg";
 import js from "../images/javascript-js-seeklogo.com.svg";
@@ -24,7 +24,7 @@ onAuthStateChanged(auth, user => {
 })
 }, [router])
   return (
-    <div className="container home relative">
+    <div className="containerDiv home relative">
        <HeadComponent title="Practice.js - Home" />
       <Navbar />
       <div className="flex items-center justify-between w-9/12 mx-auto mt-12">

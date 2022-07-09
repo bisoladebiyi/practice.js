@@ -3,7 +3,8 @@ import { TopicTypes } from "./types"
 export const jsTopics: TopicTypes[] = [
     {
         topic: "Variables & Functions ( )",
-        position: "right"
+        position: "right",
+        id: "variables"
     },
     {
         topic: "Conditional Statements",

@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react'
-import { UserDataType } from '../types';
+import { UserDataType } from '../../types';
 
 interface Props{
     type: string;

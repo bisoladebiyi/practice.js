@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-interface Props {
+interface BtnProps {
     size: 'small' | 'big' | 'large';
     outline?: 'true' | 'false';
     noTransparentBg?: 'true' | 'false';
     type?: 'button' | 'submit'
     children: string;
     className?: string;
+    onClick?: () => void
 }
 
-const Button = ({size, outline, children, noTransparentBg, type, className}: Props) => {
+const Button: React.FC<BtnProps> = ({size, outline, children, noTransparentBg, type, className, onClick}) => {
     const [outlineStyle, setOutlineStyle] = useState("")
     const [sizeStyle, setSizeStyle] = useState("")
     useEffect(()=> {
@@ -31,7 +32,7 @@ const Button = ({size, outline, children, noTransparentBg, type, className}: Pro
   
 
   return (
-    <button className={`font-semibold text-sm rounded-sm  transition-colors ${outlineStyle} ${sizeStyle} ${className}`} type={type}>{children}</button>
+    <button onClick={onClick} className={`font-semibold text-sm rounded-sm  transition-colors ${outlineStyle} ${sizeStyle} ${className}`} type={type}>{children}</button>
   )
 }
 

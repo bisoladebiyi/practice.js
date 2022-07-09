@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   }, [router])
   return (
-    <div className='container flex justify-between'>
+    <div className='containerDiv flex justify-between'>
       <HeadComponent title="Practice.js - Dashboard" />
       <SideMenu />
       <div className='w-full overflow-scroll'>
